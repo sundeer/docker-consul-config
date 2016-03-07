@@ -4,7 +4,7 @@ dest = "/opt/rancher/config/server.json"
 owner = "root"
 mode = "0644"
 keys = [
-  "/self/service/containers",
+  "/self/service/containers/0/name",
   "/containers",
   "self/container/name",
   "/self/container/primary_ip",
