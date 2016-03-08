@@ -1,7 +1,10 @@
 {
-    {{ if (eq (getv "/self/container/service_index") "1") }}"bootstrap": true,{{else}}
-    "retry_join": [{{ $containerName := getv "/self/service/containers/0/name"}}"{{getv (printf "/containers/%s/primary_ip" $containerName)}}"],
-    "bootstrap": false,{{end}}
+    {{ if (eq (getv "/self/container/service_index") "1") }}
+      "bootstrap": true,
+    {{else}}
+      "retry_join": [{{ $containerName := getv "/self/service/containers/0/name"}}"{{getv (printf "/containers/%s/primary_ip" $containerName)}}"],
+      "bootstrap": false,
+    {{end}}
     "server": true,
     "datacenter": "dc1",
     "advertise_addr": "{{getv "/self/container/primary_ip"}}",
