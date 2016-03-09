@@ -4,4 +4,4 @@ ADD ./conf.d /etc/confd/conf.d
 ADD ./templates /etc/confd/templates
 
 ENTRYPOINT ["/confd"]
-CMD ["--backend", "rancher", "--prefix", "/2015-12-19", "--log-level", "debug"]
+CMD ["--backend", "rancher", "--prefix", "/2015-12-19", "-onetime", "--log-level", "debug"]
