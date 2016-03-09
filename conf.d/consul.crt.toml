@@ -1,11 +1,12 @@
 [template]
+prefix = "/self"
 src = "consul.crt.tmpl"
 dest = "/opt/rancher/ssl/consul.crt"
 owner = "root"
 mode = "0644"
 keys = [
-  "/stacks/consul/services/server/metadata/consul1.crt",
-  "/stacks/consul/services/server/metadata/consul2.crt",
-  "/stacks/consul/services/server/metadata/consul3.crt",
-  "/self/container/service_index",
+  "/stack/services/server/metadata/consul1.crt",
+  "/stack/services/server/metadata/consul2.crt",
+  "/stack/services/server/metadata/consul3.crt",
+  "/container/service_index",
   ]

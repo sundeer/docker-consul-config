@@ -1,2 +1,2 @@
-{{ $containerID := (getv "/self/container/service_index") }}
-{{ getv (printf "/stacks/consul/services/server/metadata/consul%s.crt" $containerID) }}
+{{ $serverNum := (getv "/container/service_index") }}
+{{ getv (printf "/stack/services/server/metadata/consul%s.crt" $serverNum) }}
