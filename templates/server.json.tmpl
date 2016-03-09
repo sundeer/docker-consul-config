@@ -1,3 +1,4 @@
+{{ $number := getv "/self/container/service_index"}}
 {
   "retry_join": [
     "consul_server_1",
@@ -7,8 +8,8 @@
   "server": true,
   "leave_on_terminate": true,
   "datacenter": "dc1",
-  "advertise_addr": "{{getv "/self/container/primary_ip"}}",
-  "bind_addr": "{{getv "/self/container/primary_ip"}}",
+  "advertise_addr": "consul_server_{{$number}}",
+  "bind_addr": "0.0.0.0",
   "client_addr": "127.0.0.1",
   "bootstrap_expect": {{getv "/self/stack/services/server/scale"}},
   "data_dir": "/var/consul",
