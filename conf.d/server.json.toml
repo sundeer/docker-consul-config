@@ -9,5 +9,8 @@ keys = [
   "/self/container/name",
   "/self/container/primary_ip",
   "/stacks/consul/services/server/metadata/enc.key",
+  "/stacks/consul/services/server/containers",
   "/self/container/service_index",
+  "/self/stack/services/server/scale",
+  "/self/stack/services/server/containers",
 ]
