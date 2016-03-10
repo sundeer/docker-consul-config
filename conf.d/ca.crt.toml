@@ -3,4 +3,6 @@ src = "ca.crt.tmpl"
 dest = "/app/config/ca.crt"
 owner = "root"
 mode = "0644"
-keys = []
+keys = [
+  "/self",
+]
