@@ -9,9 +9,9 @@
   "advertise_addr": "{{getv "/container/primary_ip"}}",
   "bootstrap_expect": {{getv "/stack/services/server/scale"}},
   "encrypt": "{{getv "/stack/services/server/metadata/enc.key"}}",
-  "ca_file": "/opt/rancher/ssl/ca.crt",
-  "cert_file": "/opt/rancher/ssl/consul.crt",
-  "key_file": "/opt/rancher/ssl/consul.key",
+  "ca_file": "/app/config/ca.crt",
+  "cert_file": "/app/config/consul.crt",
+  "key_file": "/app/config/consul.key",
   "verify_incoming": true,
   "verify_outgoing": true,
   "log_level": "INFO"
