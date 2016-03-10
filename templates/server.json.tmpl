@@ -7,6 +7,8 @@
   "leave_on_terminate": true,
   "datacenter": "dc1",
   "advertise_addr": "{{getv "/container/primary_ip"}}",
+  "bind_addr": "{{getv "/container/primary_ip"}}",
+  "client_addr": "{{getv "/container/primary_ip"}}", 
   "bootstrap_expect": {{getv "/stack/services/server/scale"}},
   "encrypt": "{{getv "/stack/services/server/metadata/enc.key"}}",
   "ca_file": "/app/config/ca.crt",
