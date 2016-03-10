@@ -1,7 +1,7 @@
 [template]
 prefix = "/self"
 src = "server.json.tmpl"
-dest = "/opt/rancher/config/server.json"
+dest = "/app/config/server.json"
 owner = "root"
 mode = "0644"
 keys = [
