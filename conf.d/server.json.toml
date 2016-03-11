@@ -1,13 +1,11 @@
 [template]
+prefix = "/self"
 src = "server.json.tmpl"
-dest = "/opt/rancher/config/server.json"
+dest = "/app/config/server/server.json"
 owner = "root"
 mode = "0644"
 keys = [
-  "/self/service/containers/0/name",
-  "/containers",
-  "self/container/name",
-  "/self/container/primary_ip",
-  "/stacks/consul/services/server/metadata/enc.key",
-  "/self/container/service_index",
+  "/container/primary_ip",
+  "/stack/services/server/metadata/enc.key",
+  "/stack/services/server/scale",
 ]

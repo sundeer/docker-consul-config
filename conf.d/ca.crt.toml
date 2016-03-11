@@ -1,9 +1,8 @@
 [template]
-prefix = "/stacks/consul/services/server/metadata"
 src = "ca.crt.tmpl"
-dest = "/opt/rancher/ssl/ca.crt"
+dest = "/app/config/ca.crt"
 owner = "root"
 mode = "0644"
 keys = [
-  "/ca.crt",
+  "/self",
 ]
