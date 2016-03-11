@@ -1,2 +1,1 @@
-{{ $serverNum := (getv "/container/service_index") }}
-{{ getv (printf "/stack/services/server/metadata/consul%s.crt" $serverNum) }}
+{{getenv "CONSUL_CRT"}}

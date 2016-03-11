@@ -8,13 +8,13 @@
   "datacenter": "dc1",
   "advertise_addr": "{{getv "/container/primary_ip"}}",
   "bind_addr": "{{getv "/container/primary_ip"}}",
-  "client_addr": "{{getv "/container/primary_ip"}}", 
+  "client_addr": "{{getv "/container/primary_ip"}}",
   "bootstrap_expect": {{getv "/stack/services/server/scale"}},
-  "encrypt": "{{getv "/stack/services/server/metadata/enc.key"}}",
+  "encrypt": "{{getenv "ENC_KEY"}}",
   "ca_file": "/app/config/ca.crt",
   "cert_file": "/app/config/consul.crt",
   "key_file": "/app/config/consul.key",
-  "verify_incoming": true,
-  "verify_outgoing": true,
+  "verify_incoming": false,
+  "verify_outgoing": false,
   "log_level": "INFO"
-}
+}j
